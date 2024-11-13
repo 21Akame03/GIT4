@@ -1,21 +1,21 @@
-class KfzV0 {
-    public int sitze;
-    public int tankInhalt;
-    public float verbrauch;
-}
-
-
 public class KfzDemo {
-    public int sitze;
-    public int tankInhalt;
-    public float verbrauch;
-
-    public static void main(String[] args) throws Exception {
-        KfzV0 minivan = new KfzV0();
-
+    public static void main(String[] args) {
+        // Objekt minivan erstellen und initialisieren
+        Fahrzeug minivan = new Fahrzeug();
         minivan.sitze = 6;
-        minivan.tankInhalt = 45;
+        minivan.tankInhalt = 70;
         minivan.verbrauch = 14;
-       
+
+        // Reichweite berechnen und ausgeben
+        System.out.println("Reichweite von Minivan bei vollem Tank: " + minivan.reichweite() + " km");
+
+        // Objekt sportwagen erstellen und initialisieren
+        Fahrzeug sportwagen = new Fahrzeug();
+        sportwagen.sitze = 2;
+        sportwagen.tankInhalt = 45;
+        sportwagen.verbrauch = 11;
+
+        // Reichweite berechnen und ausgeben
+        System.out.println("Reichweite von Sportwagen bei vollem Tank: " + sportwagen.reichweite() + " km");
     }
 }
